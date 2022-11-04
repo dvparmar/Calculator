@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CALCULATOR</title>
+	<style type="text/css">	
+		#ans{
+			color: red;
+			background-color: greenyellow;
+			height: 50px;
+			width: 95%;
+		}
+		body{
+			background-image: url(https://rockwellautomation.scene7.com/is/image/rockwellautomation/16x9-mes-cloud-solution-digital-transformation-GettyImages-1315756619.2560.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		table{
+			padding: 20px;
+			border-radius: 20px;
+			border-collapse: all;
+			margin-top: 200px;
+			background: rgb(131,58,180);
+			background: linear-gradient(to bottom, #66ff33 0%, #cc00ff 100%);
+		}
+		tr{
+			height: 20px;
+			width: 20px;
+			align-items: center;
+		}
+		td{
+			text-align: center;
+			height: 50px;
+			width: 50px;
+			vertical-align: center;
+		}
+
+/* CSS */
+.btn {
+  background: linear-gradient(to bottom, #ff00668c 0%, #ffff668c 100%);
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
+	</style>
+</head>
+<body>
+	<h1 align="center" style="color: Magenta">CALCULATOR</h1>
+	<table align="center">
+		<tr>
+			<td colspan="3">
+				<input type="text" name="" Id="ans" placeholder="0">
+			</td>
+			<td><input type="button" class="btn" onclick="document.getElementById('ans').value=''" value="CE"></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="7"></td>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="8"></td>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="9"></td>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="/"></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="4"></td>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="5"></td>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="6"></td>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="*"></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="1"></td>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="2"></td>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="3"></td>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="+"></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="."></td>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="0"></td>
+			<td><input type="button" class="btn" onclick="Calculator()" value="="></td>
+			<td><input type="button" class="btn" onclick="appendNumber(this)" value="-"></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		function appendNumber(n){
+			document.getElementById("ans").value +=n.value;
+		}
+		function Calculator(n) {
+			n = document.getElementById("ans").value;
+			ans = eval(n);
+			document.getElementById("ans").value = ans;
+		}
+	</script>
+</body>
+</html>
+</body>
+</html>
